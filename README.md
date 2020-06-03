@@ -3,9 +3,12 @@ CISC 4615, Spring 2020 Data Communication and Networking
 CISC 4615 — Project 2
 In the previous labs and project 1, we learned how to use TCP and UDP to connect different hosts. During the lectures, we discussed the details of TCP tramission, which mainly involves four major parts, path establishment, flow control, congestion control as well as connection closure.
 In project 2, you will simulate an extremely simplified TCP transmission by using only the data field of the complete packet.
-Implementation Details
+
+- Implementation Details
+
 Please note that this is not a real TCP implemention. We just want to simulate some important features in the TCP protocol.
-Construct the REAL link
+
+- Construct the REAL link
 You are expected to construct a simple two-node network by using UDP.
 A<−−−>B The base code has done this part for you.
 Prepare the packets
