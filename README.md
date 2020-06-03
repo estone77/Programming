@@ -13,19 +13,35 @@ In project 2, you will simulate an extremely simplified TCP transmission by usin
 Please note that this is not a real TCP implemention. We just want to simulate some important features in the TCP protocol.
 
 - Construct the REAL link
+
 You are expected to construct a simple two-node network by using UDP.
-A<−−−>B The base code has done this part for you.
-Prepare the packets
+
+
+  A<−−−>B 
+
+The base code has done this part for you.
+
+
+- Prepare the packets
+
+
 We learned the real TCP header in class.
-In our simplified simulation, we use three fields,
-1
+ In our simplified simulation, we use three fields,
+
    
- CISC 4615, Spring 2020 Data Communication and Networking
+
 • Flag: The flag is used to identify the package type, e.g. SYN, ACK, FIN for connection establishment and closure.
+
+
 • Sequence Number: The sequence number is used for in-order transmission.
-• Acknowledgement Number: The acknowledgement number is used to acknowledge the
-previous segment and expect the next one.
+
+
+• Acknowledgement Number: The acknowledgement number is used to acknowledge the previous segment and expect the next one.
+
+
 In addition to the simplified TCP header, we need to have data field.
+
+
 Therefore, you are expected contruct a struct, which consists of four attributes, the tcp header (three fields) and the data (a string message acts as payload).
     TCP connection establishment
 Flag
@@ -35,7 +51,7 @@ TCP connection closure
 When you finished transmitting all the packets, you have to notify the receiver to close the connection.
 2
   
-CISC 4615, Spring 2020 Data Communication and Networking
+
 TCP Flow control with sliding window
 We intensively discussed the sliding window algorithm in both Link Layer and TCP during the lectures. Your code should complete two parts.
 In the original algorithm, you have to maintain a buffer for the outgoing and incoming data and necessary pointers as shown below.
